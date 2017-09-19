@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="ButtonAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwo-WT-kFl" customClass="LoadingButton" customModule="ButtonAnimation" customModuleProvider="target">
+                                <rect key="frame" x="56.5" y="308.5" width="262.5" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IMh-07-3dx"/>
+                                </constraints>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8He-Ee-Wri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iI-ep-Sc8" customClass="LoadingButton" customModule="ButtonAnimation" customModuleProvider="target">
+                                <rect key="frame" x="40" y="120" width="295" height="40"/>
+                                <color key="backgroundColor" red="0.086437322199344635" green="0.58796370029449463" blue="0.65996980667114258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BXj-qX-Hk2"/>
+                                </constraints>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ev-OH-PiJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uwo-WT-kFl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hI-YL-Ic2"/>
+                            <constraint firstItem="8iI-ep-Sc8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="Mgh-pR-5cV"/>
+                            <constraint firstItem="8iI-ep-Sc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V9Y-Gg-cWX"/>
+                            <constraint firstAttribute="trailing" secondItem="8iI-ep-Sc8" secondAttribute="trailing" constant="40" id="YCy-3S-I5k"/>
+                            <constraint firstItem="8iI-ep-Sc8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="fmz-WK-pYu"/>
+                            <constraint firstItem="uwo-WT-kFl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kAD-mi-gv7"/>
+                            <constraint firstItem="uwo-WT-kFl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="sqn-Vi-ThO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="uwo-WT-kFl" id="ts8-G3-HWn"/>
+                        <outlet property="signupBtn" destination="8iI-ep-Sc8" id="Ffn-cc-F2e"/>
+                        <outlet property="signupBtnHeightConstraint" destination="BXj-qX-Hk2" id="twc-kg-HHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="cCT-Q3-T7j">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="rkA-gQ-uLg" customClass="DetailVC" customModule="ButtonAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="On7-qk-uYf"/>
+                        <viewControllerLayoutGuide type="bottom" id="oIl-m2-iZ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbr-XR-vPw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LionPdf" translatesAutoresizingMaskIntoConstraints="NO" id="SuB-fi-y5a">
+                                <rect key="frame" x="37.5" y="133.5" width="300" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch anywhere to Dismiss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-yL-3Od">
+                                <rect key="frame" x="20" y="53.5" width="335" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JZR-n2-h7j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sm4-yL-3Od" secondAttribute="trailing" constant="20" id="3e7-7y-E2r"/>
+                            <constraint firstItem="SuB-fi-y5a" firstAttribute="width" secondItem="tbr-XR-vPw" secondAttribute="width" multiplier="0.8" id="ATC-ni-iz4"/>
+                            <constraint firstItem="SuB-fi-y5a" firstAttribute="height" secondItem="tbr-XR-vPw" secondAttribute="height" multiplier="0.6" id="LEh-p2-nf6"/>
+                            <constraint firstItem="SuB-fi-y5a" firstAttribute="centerY" secondItem="tbr-XR-vPw" secondAttribute="centerY" id="QBr-7o-hkZ"/>
+                            <constraint firstItem="Sm4-yL-3Od" firstAttribute="leading" secondItem="tbr-XR-vPw" secondAttribute="leading" constant="20" id="Yks-gu-rDs"/>
+                            <constraint firstItem="SuB-fi-y5a" firstAttribute="top" secondItem="Sm4-yL-3Od" secondAttribute="bottom" constant="20" id="aFL-rN-O40"/>
+                            <constraint firstItem="SuB-fi-y5a" firstAttribute="centerX" secondItem="tbr-XR-vPw" secondAttribute="centerX" id="kWr-w6-e5x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-ob-D51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LionPdf" width="1440" height="810"/>
+    </resources>
+</document>
